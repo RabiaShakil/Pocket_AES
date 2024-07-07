@@ -1,0 +1,14 @@
+This encryption scheme has several security flaws and is not suitable for secure data encryption
+
+Fixed Block Size: Using a fixed block size of 16 bits (2 characters) for encryption can be problematic. 
+If the plaintext has repeating patterns or structures, they will also show up as repeating patterns in the ciphertext, which can be exploited by attackers.
+
+Padding with Null Bytes: Padding with null bytes (00 hex) is not a secure padding scheme. 
+
+Lack of Authentication: The scheme doesn't provide any means of ensuring the integrity of the data.
+An attacker could modify the ciphertext, and the recipient would have no way to detect the tampering.
+
+Encrypting each block of text separately using the same key is highly insecure.
+Identical plaintext blocks will produce identical ciphertext blocks, which can leak information about the underlying data.
+An attacker can exploit this to gain insights into the content.
+In short, the encryption scheme lacks basic security.
